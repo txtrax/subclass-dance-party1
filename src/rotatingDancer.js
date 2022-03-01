@@ -13,3 +13,7 @@ makeRotatingDancer.prototype.step = function () {
   makeDancer.prototype.step.call(this);
   // this$node.toggle('bounce');
 };
+
+// makeRotatingDancer.prototype.lineup = function() {
+//   this.setPosition(top, 10);
+// };

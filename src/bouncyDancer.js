@@ -15,3 +15,11 @@ makeBouncyDancer.prototype.step = function () {
   makeDancer.prototype.step.call(this);
   this.$node.toggle('bounce');
 };
+
+// makeBouncyDancer.prototype.lineup = function(top, left) {
+
+//   var styleSettings = {
+//     left: 1920
+//   };
+//   this.$node.css(styleSettings);
+// };

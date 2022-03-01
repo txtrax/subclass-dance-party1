@@ -35,17 +35,13 @@ $(document).ready(function() {
 });
 
 
-
-
 $('.blowUpDanceFloor').on('click', function(event) {
   $('.dancer').remove();
 });
-
 
 $('.lineUp').on('click', function(event) {
   for (var i = 0; i < window.dancers.length; i ++) {
     window.dancers[i].lineUp();
   }
-
-
 });
+

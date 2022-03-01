@@ -32,7 +32,7 @@
 // };
 
 var makeDancer = function (top, left, timeBetweenSteps) {
-  this.$node = $('<span class="dancer"></span>');
+  this.$node = $('<div class="dancer"></div>');
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
@@ -53,7 +53,9 @@ makeDancer.prototype.setPosition = function (top, left) {
 };
 
 makeDancer.prototype.lineUp = function () {
-  this.$node.animate({
-    left: 10
-  });
+  var styleSettings = {
+    top: 1000
+  };
+  this.$node.css(styleSettings);
+
 };

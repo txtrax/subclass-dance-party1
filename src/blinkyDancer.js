@@ -33,3 +33,14 @@ makeBlinkyDancer.prototype.step = function () {
   makeDancer.prototype.step.call(this);
   this.$node.toggle();
 };
+
+
+// makeBlinkyDancer.prototype.lineUp = function () {
+
+//   var styleSettings = {
+//     left: 50
+//   };
+//   this.$node.css(styleSettings);
+// };
+
+

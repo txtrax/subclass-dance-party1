@@ -13,3 +13,9 @@ makeShuffleDancer.prototype.step = function () {
   makeDancer.prototype.step.call(this);
   // this$node.toggle('bounce');
 };
+
+
+
+// makeShuffleDancer.prototype.lineUp = function (top, left) {
+//   this.setPosition(1000);
+// };
