@@ -21,10 +21,7 @@
 
 var makeBlinkyDancer = function (top, left, timebetweenSteps) {
   makeDancer.call(this, top, left, timebetweenSteps);
-
   this.$node.addClass('BlinkyDancer');
-  
-
   this.setPosition(top, left);
 };
 

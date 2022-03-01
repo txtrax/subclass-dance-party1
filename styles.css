@@ -3,8 +3,10 @@ body, html{
 }
 body{
   background-image: url("assets/pngs/disco2.png");
-  height: 100%;
-  width: 100%;
+  background-repeat: no-repeat;
+  /* height: auto;
+  width: auto; */
+
 
   /* margin: 0px;
   background-color:#444; */
@@ -16,6 +18,10 @@ body, a:link, a:visited, a:active{
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
+}
+
+.addDancerButton{
+  display: inline;
 }
 .topbar{
   height:32px;
@@ -32,9 +38,6 @@ body, a:link, a:visited, a:active{
 }
 
 .BlinkyDancer{
-
-
-  background-color: transparent;
   content:url("assets/pngs/corgi2.png");
   position:absolute;
 }
@@ -44,3 +47,8 @@ body, a:link, a:visited, a:active{
 
   content:url("assets/pngs/shibainu.png");
 }
+
+.RotatingDancer{
+  position:absolute;
+  content:url("assets/pngs/pomeranian.png");
+};
