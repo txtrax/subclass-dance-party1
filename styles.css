@@ -25,3 +25,10 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.BlinkyDancer{
+  /* border:10px solid red;
+  border-radius:10px; */
+  position:absolute;
+  content: src("assets/pngs/corgi2.png")
+}
