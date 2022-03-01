@@ -21,8 +21,9 @@
 
 var makeBlinkyDancer = function (top, left, timebetweenSteps) {
   makeDancer.call(this, top, left, timebetweenSteps);
-  this.$node = $('<img class="BlinkyDancer" src = "assets/pngs/corgi2.png"</img>');
-  // this.$node.attr('src', 'assets/pngs/corgi2.png');
+
+  this.$node.addClass('BlinkyDancer');
+  
 
   this.setPosition(top, left);
 };

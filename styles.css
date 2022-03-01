@@ -2,8 +2,12 @@ body, html{
   height:100%;
 }
 body{
-  margin: 0px;
-  background-color:#444;
+  background-image: url("assets/pngs/discobackground.png");
+  height: 100%;
+  width: 100%;
+
+  /* margin: 0px;
+  background-color:#444; */
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -21,14 +25,22 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+
+
   position:absolute;
+  background-color: transparent;
 }
 
 .BlinkyDancer{
-  /* border:10px solid red;
-  border-radius:10px; */
+
+
+  background-color: transparent;
+  content:url("assets/pngs/corgi2.png");
   position:absolute;
-  content: src("assets/pngs/corgi2.png")
+}
+
+.BouncyDancer{
+  position:absolute;
+
+  content:url("assets/pngs/shibainu.png");
 }
