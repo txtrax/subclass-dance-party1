@@ -1,17 +1,17 @@
-var makeShuffleDancer = function (top, left, timeBetweenSteps) {
-  makeDancer.call(this);
+var ShuffleDancer = function (top, left, timeBetweenSteps) {
+  Dancer.call(this);
 
   this.$node.addClass('ShuffleDancer');
   this.setPosition(top, left);
 };
 
-makeShuffleDancer.prototype = Object.create(makeDancer.prototype);
+ShuffleDancer.prototype = Object.create(Dancer.prototype);
 
-makeShuffleDancer.prototype.constructor = makeShuffleDancer;
+ShuffleDancer.prototype.constructor = ShuffleDancer;
 
-makeShuffleDancer.prototype.step = function () {
-  makeDancer.prototype.step.call(this);
-  // this$node.toggle('bounce');
+ShuffleDancer.prototype.step = function () {
+  Dancer.prototype.step.call(this);
+  // this.$node.toggle('shuffle');
 };
 
 

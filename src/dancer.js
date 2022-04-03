@@ -31,20 +31,47 @@
 //   return dancer;
 // };
 
-var makeDancer = function (top, left, timeBetweenSteps) {
+// ES6
+// var Dancer = class {
+//   constructor(top, left, timeBetweenSteps) {
+//     this.$node = $('<span class="dancer"></span>');
+//     this._timeBetweenSteps = timeBetweenSteps;
+//     this.step();
+//     this.setPosition(top,left);
+//   }
+//   step() {
+//     // Arrow function acknowledges lexical `this`
+//     setTimeout(() => this.step(), this._timeBetweenSteps)
+//   }
+
+//   setPosition(top, left) {
+//     var styleSettings = {
+//       top: top,
+//       left: left
+//     };
+//     this.$node.css(styleSettings);
+//   }
+// }
+
+var Dancer = function (top, left, timeBetweenSteps) {
   this.$node = $('<div class="dancer"></div>');
-  this.top = top;
-  this.left = left;
-  this.timeBetweenSteps = timeBetweenSteps;
+  // this.top = top;
+  // this.left = left;
+  this._timeBetweenSteps = timeBetweenSteps;
   this.step();
   this.setPosition(top, left);
 };
 
-makeDancer.prototype.step = function () {
-  setTimeout(this.step.bind(this), this.timeBetweenSteps);
+Dancer.prototype.step = function () {
+  // v1: requires an extra clock tick
+  // setTimeout(this.step.bind(this), this._timeBetweenSteps);
+
+  // v2: does not require extra clock tick
+  var context = this;
+  setTimeout(function() { context.step(); }, this._timeBetweenSteps);
 };
 
-makeDancer.prototype.setPosition = function (top, left) {
+Dancer.prototype.setPosition = function (top, left) {
   var styleSettings = {
     top: top,
     left: left
@@ -52,10 +79,9 @@ makeDancer.prototype.setPosition = function (top, left) {
   this.$node.css(styleSettings);
 };
 
-makeDancer.prototype.lineUp = function () {
+Dancer.prototype.lineUp = function () {
   var styleSettings = {
     top: 1000
   };
   this.$node.css(styleSettings);
-
 };

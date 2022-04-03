@@ -1,17 +1,17 @@
-var makeRotatingDancer = function (top, left, timeBetweenSteps) {
-  makeDancer.call(this);
+var RotatingDancer = function (top, left, timeBetweenSteps) {
+  Dancer.call(this);
 
   this.$node.addClass('RotatingDancer');
   this.setPosition(top, left);
 };
 
-makeRotatingDancer.prototype = Object.create(makeDancer.prototype);
+RotatingDancer.prototype = Object.create(Dancer.prototype);
 
-makeRotatingDancer.prototype.constructor = makeRotatingDancer;
+RotatingDancer.prototype.constructor = RotatingDancer;
 
-makeRotatingDancer.prototype.step = function () {
-  makeDancer.prototype.step.call(this);
-  // this$node.toggle('bounce');
+RotatingDancer.prototype.step = function () {
+  Dancer.prototype.step.call(this);
+  // this.$node.toggle('rotate');
 };
 
 // makeRotatingDancer.prototype.lineup = function() {
